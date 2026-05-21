@@ -36,9 +36,15 @@ st.markdown("---")
 # Función optimizada para la lectura y persistencia en caché de los artefactos del modelo
 @st.cache_resource
 def cargar_artefactos_clinicos():
-    # Carga de la arquitectura matemática y la estructura exacta de vectores de entrada
-    modelo = joblib.load("model1/logistic_regression_model.pkl")
-    columnas = joblib.load("model1/columnas_modelo.pkl")
+    # Detecta automáticamente la ubicación de app.py
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    
+    # CORRECCIÓN: Usamos los nombres reales de tus archivos pkl
+    ruta_modelo = os.path.join(BASE_DIR, "model1", "modelo_autismo_lr.pkl")
+    ruta_columnas = os.path.join(BASE_DIR, "model1", "columnas_modelo.pkl")
+    
+    modelo = joblib.load(ruta_modelo)
+    columnas = joblib.load(ruta_columnas)
     return modelo, columnas
 
 try:
