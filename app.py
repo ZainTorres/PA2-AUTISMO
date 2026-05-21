@@ -19,8 +19,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("🔗 Recursos del Proyecto")
 # Vínculo directo al desarrollo del cuaderno de análisis en Google Colab
 st.sidebar.markdown(
-    "[📂 Ver Cuaderno Origen (Google Colab)](https://colab.research.google.com/drive/1CReebMxdUtDdMaOp79aPPrXNDKYIf2t_?usp=sharing)", 
-    unsafe_url=False
+    "[📂 Ver Cuaderno Origen (Google Colab)](https://colab.research.google.com/drive/1CReebMxdUtDdMaOp79aPPrXNDKYIf2t_?usp=sharing)"
 )
 
 # Encabezado principal de la aplicación web
